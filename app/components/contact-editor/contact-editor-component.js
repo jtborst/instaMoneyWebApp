@@ -53,9 +53,10 @@ System.register(['angular2/core', '../../common/contacts-service', 'angular2/rou
                         selector: 'contact-editor',
                         templateUrl: './app/components/contact-editor/contact-editor-component.html'
                     }), 
-                    __metadata('design:paramtypes', [router_1.Router, contacts_service_1.ContactsService, router_1.RouteParams])
+                    __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, contacts_service_1.ContactsService, (typeof (_b = typeof router_1.RouteParams !== 'undefined' && router_1.RouteParams) === 'function' && _b) || Object])
                 ], ContactEditorComponent);
                 return ContactEditorComponent;
+                var _a, _b;
             }());
             exports_1("ContactEditorComponent", ContactEditorComponent);
         }

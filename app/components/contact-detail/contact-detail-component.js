@@ -41,9 +41,10 @@ System.register(['angular2/core', 'angular2/router', '../../common/contacts-serv
                         templateUrl: './app/components/contact-detail/contact-detail-component.html',
                         directives: [router_2.ROUTER_DIRECTIVES]
                     }), 
-                    __metadata('design:paramtypes', [contacts_service_1.ContactsService, router_1.RouteParams])
+                    __metadata('design:paramtypes', [contacts_service_1.ContactsService, (typeof (_a = typeof router_1.RouteParams !== 'undefined' && router_1.RouteParams) === 'function' && _a) || Object])
                 ], ContactDetailComponent);
                 return ContactDetailComponent;
+                var _a;
             }());
             exports_1("ContactDetailComponent", ContactDetailComponent);
         }

@@ -41,9 +41,10 @@ System.register(['angular2/http', 'angular2/core'], function(exports_1, context_
                 };
                 ContactsService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
                 ], ContactsService);
                 return ContactsService;
+                var _a;
             }());
             exports_1("ContactsService", ContactsService);
         }
