@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contacts App</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/materialize-css/bin/materialize.css">
+  <link rel="stylesheet" href="app/contacts-app.css">
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.dev.js"></script>
+  <script>
+    System.config({
+      map: {
+        rxjs: 'node_modules/rxjs'
+      },
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        },
+        rxjs: {
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('app/main').then(null, console.error.bind(console));
+  </script>
+</head>
+<body>
+    <contacts-app>Loading...</contacts-app>
+</body>
+</html>

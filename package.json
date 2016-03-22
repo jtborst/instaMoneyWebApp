@@ -1,0 +1,31 @@
+{
+  "name": "angular2-master-class-app",
+  "version": "0.1.0",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "compile-server": "tsc server/server.ts server/contacts.ts --outdir server/gen",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"node server/gen/server.js\" "
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.6",
+    "body-parser": "1.14.2",
+    "cors": "2.7.1",
+    "es5-shim": "^4.5.7",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.33.13",
+    "express": "4.13.3",
+    "materialize-css": "0.97.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.8",
+    "zone.js": "0.5.14"
+  },
+  "devDependencies": {
+    "concurrently": "1.0.0",
+    "cpy-cli": "^1.0.0",
+    "lite-server": "1.2.0",
+    "typescript": "1.9.0-dev.20160215"
+  }
+}
