@@ -5,7 +5,7 @@ import {Component} from 'angular2/core';
   template: `
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper orange darken-2">
           <span class="brand-logo center">Contacts</span>
         </div>
       </nav>
