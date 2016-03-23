@@ -8,6 +8,7 @@ interface Address {
 export interface Contact {
   id: number;
   name: string;
+  account: string;
   email: string;
   phone: string;
   birthday: string;

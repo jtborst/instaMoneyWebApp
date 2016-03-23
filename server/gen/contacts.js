@@ -2,6 +2,7 @@ module.exports = [
     {
         id: 0,
         name: 'Christoph Burgdorf',
+        account: 'AU58447444567',
         email: 'christoph@thoughtram.io',
         phone: '+49 000 1111',
         birthday: '1984-01-02',
