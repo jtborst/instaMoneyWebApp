@@ -19,6 +19,14 @@ export class NewTransactionComponent implements OnInit {
   ngOnInit () {
     this.contactId = this.routeParams.get('id');
     this.contactsService.getContact(this.contactId).subscribe(contact => this.contact = contact);
+
+    var o:Observable = this.accountsService.getAccounts()
+
+    o.subscribe(
+        data => {this.account = data},
+        err => console.error(err),
+        () => console.log('done')
+    );
   }
 
   save (transaction: Transaction) {

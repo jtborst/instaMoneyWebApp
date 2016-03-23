@@ -14,7 +14,7 @@
 <nav>
     <div class="nav-wrapper grey lighten-2">
         <div class="container">
-            <span class="center-align">Saldo &euro; 20.000,00</span>
+            <span class="center-align">Saldo  {{account?.balance | currency:'EUR':true:'4.2-2'}}</span>
         </div>
     </div>
 </nav>

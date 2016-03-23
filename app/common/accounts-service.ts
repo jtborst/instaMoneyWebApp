@@ -10,8 +10,11 @@ export class AccountsService {
     }
 
     getAccounts() {
-        return this.http.get('https://instamoney.firebaseio.com/accounts/NL50INGB0001234567.json')
-            .map(res => res.json())
+        return this.http.get('https://instamoney.firebaseio.com/accounts/NL50INGB0001234567.json').map(res => res.json())
+    }
+
+    getTransactions() {
+        return this.http.get('https://instamoney.firebaseio.com/accounts/NL50INGB0001234567/transactions.json').map(res => res.json())
     }
 
     newTransaction(transaction: Transaction) {

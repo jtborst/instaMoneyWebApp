@@ -3,6 +3,7 @@ import {Contact} from '../../models/contact';
 import {ContactsService} from '../../common/contacts-service';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
+import {AccountsService} from '../../common/accounts-service';
 
 @Component({
   selector: 'contact-chats',
@@ -11,9 +12,18 @@ import {Observable} from 'rxjs/Observable';
 })
 export class ContactChatsComponent implements OnInit {
   contacts: Observable<Array<Contact>>;
-  constructor (private contactsService: ContactsService) {}
+  transactions: Observable<Array<Transaction>>;
+  constructor (private contactsService: ContactsService, private accountsService: AccountsService) {}
 
   ngOnInit () {
     this.contacts = this.contactsService.getContacts();
+
+   var o:Observable = this.accountsService.getAccounts()
+
+    o.subscribe(
+        data => {this.transactions = data},
+        err => console.error(err),
+        () => console.log('done')
+    );
   }
 }

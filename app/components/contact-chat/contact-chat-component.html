@@ -32,12 +32,22 @@
             <div class="card">
                 <div class="card-content black-text">
                     <!--<span class="card-title">Card Title</span>-->
-                    <p>Hallo</p>
+                    <p>Ontvangen - &euro; 10</p>
                 </div>
             </div>
         </div>
     </div>
-    </main>
+
+    <div class="row" *ngFor="#transaction of transactions">
+        <div class="col s11 push-s1">
+            <div class="card">
+                <div class="card-content black-text">
+                     <p>Overgemaakt - {{transaction?.amount | currency:'EUR':true:'4.2-2'}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 
 
