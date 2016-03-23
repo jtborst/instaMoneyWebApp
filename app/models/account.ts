@@ -1,4 +1,4 @@
-import {Transaction} from "../components/transaction/transaction";
+import {Transaction} from "../components/models/transaction";
 export class Account {
 
     IBAN:number;
