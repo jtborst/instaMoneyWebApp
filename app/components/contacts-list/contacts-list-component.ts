@@ -1,6 +1,7 @@
 import {Component, OnInit} from 'angular2/core';
 import {Contact} from '../../models/contact';
 import {ContactsService} from '../../common/contacts-service';
+import {AppStateService} from '../../common/app-state';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
 
@@ -14,6 +15,7 @@ export class ContactsListComponent implements OnInit {
   constructor (private contactsService: ContactsService) {}
 
   ngOnInit () {
+
     this.contacts = this.contactsService.getContacts();
   }
 }
