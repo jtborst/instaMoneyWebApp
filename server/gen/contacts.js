@@ -1,13 +1,13 @@
 module.exports = [
     {
         id: 0,
-        name: 'Christoph Burgdorf',
+        name: 'Jasper Labohm',
         account: 'AU58447444567',
         email: 'christoph@thoughtram.io',
         phone: '+49 000 1111',
         birthday: '1984-01-02',
         website: 'thoughtram.io',
-        image: '/images/0.jpg',
+        image: '/images/jasper.jpg',
         address: {
             street: 'thoughtram road 1',
             zip: '65222',
