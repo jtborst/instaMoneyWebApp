@@ -4,7 +4,7 @@ import {Injectable} from 'angular2/core';
 
 @Injectable()
 export class ContactsService {
-  private API_ENDPOINT = 'http://172.16.34.8:4000';
+  private API_ENDPOINT = 'http://localhost:4000';
 
   constructor (private http: Http) {
   }

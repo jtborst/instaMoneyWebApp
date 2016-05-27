@@ -26,7 +26,7 @@ import 'rxjs/add/operator/map';
   { path: '/', component: ContactsListComponent, name: 'ContactsList' },
   { path: '/contact/:id/chat', component: ContactChatComponent, name: 'ContactChat'},
   { path: '/contact/:id', component: ContactDetailComponent, name: 'ContactDetail' },
-  { path: '/contact/:id/edit', component: ContactEditorComponent, name: 'ContactEditor' }
+  { path: '/contact/:id/edit', component: ContactEditorComponent, name: 'ContactEditor' },
   { path: '/contact/:id/newtransaction', component: NewTransactionComponent, name: 'NewTransaction' }
 ])
 export class ContactsApp {
