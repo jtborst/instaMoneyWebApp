@@ -13,7 +13,7 @@ import {AccountsService} from '../../common/accounts-service';
   directives: [ROUTER_DIRECTIVES],
 })
 export class ContactChatComponent implements OnInit {
-  transactions: Observable<Map<Transaction>>;
+  transactions: Observable<Array<Transaction>>;
   contact: Contact;
   name: string;
     
@@ -28,7 +28,7 @@ export class ContactChatComponent implements OnInit {
     var o:Observable = this.accountsService.getTransactions()
 
     o.subscribe(
-        data => {this.transactions = Object.keys(data.transactions).map(function (key) {console.log(key); return data[key]})},
+        data => {this.transactions = data.transactions},
         err => console.error(err),
         () => console.log('done')
     );

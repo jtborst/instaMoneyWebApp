@@ -36,8 +36,10 @@ export class ContactsListComponent implements OnInit {
     );
   }
 
-  gotoContactChat(contactId: string, name: string){
-    this.stateService.setName(name)
+  gotoContactChat(contactId: string, name: string, image: string, account: string){
+    this.stateService.setName(name);
+    this.stateService.setImage(image);
+    this.stateService.setAccount(account);
     this.router.navigate(['/ContactChat', {id: contactId}]);
   }
 }

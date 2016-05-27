@@ -5,6 +5,7 @@ import {ContactsService} from '../../common/contacts-service';
 import {AccountsService} from '../../common/accounts-service';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 import {Router, RouteParams} from 'angular2/router';
+import {StateService} from '../../common/state-service';
 
 @Component({
   selector: 'new-transaction',
@@ -13,12 +14,16 @@ import {Router, RouteParams} from 'angular2/router';
 })
 export class NewTransactionComponent implements OnInit {
   contact: Contact;
+  name: string;
+  image: string;
   transaction: Transaction = <Transaction>{ transaction: {}};
-  constructor (private router:Router, private contactsService: ContactsService, private accountsService: AccountsService, private routeParams: RouteParams) {}
+  constructor (private router:Router, private contactsService: ContactsService, private accountsService: AccountsService, private routeParams: RouteParams, private stateService: StateService) {}
 
   ngOnInit () {
     this.contactId = this.routeParams.get('id');
-    this.contactsService.getContact(this.contactId).subscribe(contact => this.contact = contact);
+    this.name = this.stateService.getName();
+    this.image = this.stateService.getImage();
+    //this.contactsService.getContact(this.contactId).subscribe(contact => this.contact = contact);
 
     var o:Observable = this.accountsService.getAccounts()
 
@@ -30,12 +35,12 @@ export class NewTransactionComponent implements OnInit {
   }
 
   save (transaction: Transaction) {
-    transaction.from = "NL50INGB0001234567";
-    transaction.to = this.contact.account;
+    transaction.from = "NL93INGB0978425803";
+    transaction.to = this.stateService.getAccount();
 
     console.log(transaction);
     this.accountsService.newTransaction(transaction)
-                        .subscribe(() => this.goToChat());
+                         .subscribe(() => this.goToChat());
   }
 
   private goToChat () {

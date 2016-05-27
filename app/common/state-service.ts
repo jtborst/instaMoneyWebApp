@@ -5,7 +5,7 @@ export class StateService {
 
     name: string;
     account: string;
-
+    image: string;
 
     constructor() {
     }
@@ -24,5 +24,13 @@ export class StateService {
 
     setAccount(account: string) {
         this.account = account;
+    }
+
+    getImage() {
+        return this.image;
+    }
+
+    setImage(image: string) {
+        this.image = image;
     }
 }
