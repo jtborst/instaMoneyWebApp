@@ -20,7 +20,8 @@
 <ul class="collection">
   <li class="collection-item avatar"
       *ngFor="#contact of contacts | async">
-      <a [routerLink]="['/ContactChat', {id: contact.id}]">
+      <!--<a [routerLink]="['/ContactChat?name=name', {id: contact.id}]">-->
+      <a (click)="gotoContactChat(contact.id, contact.name)">
         <img [src]="contact.image" alt="" class="circle">
         <span class="title">{{contact.name}} - {{contact.account}}</span>
       </a>

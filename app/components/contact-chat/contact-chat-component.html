@@ -8,7 +8,7 @@
                 </a>
                 </li>
             </ul>
-            <span class="brand-logo center">{{contact?.name}}</span>
+            <span class="brand-logo center">{{name}}</span>
         </div>
     </nav>
 </div>
@@ -42,7 +42,8 @@
         <div class="col s11 push-s1">
             <div class="card">
                 <div class="card-content black-text">
-                     <p>Overgemaakt - {{transaction?.amountEUR | currency:'EUR':true:'.2-2'}} </p>
+                     <!--<p>Overgemaakt - {{transaction?.amount | currency:'EUR':true:'.2-2'}} </p>-->
+                    <p>Overgemaakt abc - {{transaction?.amount}} </p>
                 </div>
             </div>
         </div>
