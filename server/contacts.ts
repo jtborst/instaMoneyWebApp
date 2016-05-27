@@ -1,34 +1,22 @@
 module.exports = [
     {
-        id: 0,
-        name: 'Christoph Burgdo',
-        account: 'AU58447444567',
-        email: 'christoph@thoughtram.io',
-        phone: '+49 000 1111',
-        birthday: '1984-01-02',
-        website: 'thoughtram.io',
-        image: '/images/0.jpg',
-        address: {
-          street: 'thoughtram road 1',
-          zip: '65222',
-          city: 'Hanover',
-          country: 'Germany'
-        }
+        'id': 0,
+        'name': 'Christoph Burgdo',
+        'account': 'AU58447444567',
+        'email': 'christoph@thoughtram.io',
+        'phone': '+49 000 1111',
+        'birthday': '1984-01-02',
+        'website': 'thoughtram.io',
+        'image': '/images/0.jpg'
     },
     {
-        id: 1,
-        name: 'Pascal Precht',
-        email: 'pascal@thoughtram.io',
-        phone: '+49 000 222',
-        birthday: '1991-03-31',
-        website: 'thoughtram.io',
-        image: '/images/1.jpg',
-        address: {
-          street: 'thoughtram road 1',
-          zip: '65222',
-          city: 'Hanover',
-          country: 'Germany'
-        }
+        'id': 1,
+        'name': 'Pascal Precht',
+        'email': 'pascal@thoughtram.io',
+        'phone': '+49 000 222',
+        'birthday': '1991-03-31',
+        'website': 'thoughtram.io',
+        'image': '/images/1.jpg'
     },
     {
         id: 2,

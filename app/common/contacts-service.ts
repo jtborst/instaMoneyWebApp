@@ -4,7 +4,7 @@ import {Injectable} from 'angular2/core';
 
 @Injectable()
 export class ContactsService {
-  private API_ENDPOINT = 'http://172.16.34.8:4000';
+  private API_ENDPOINT = '..';
 
   constructor (private http: Http) {
   }
@@ -12,7 +12,7 @@ export class ContactsService {
   getContacts () {
     return this.http.get(`${this.API_ENDPOINT}/contacts`)
                     .map(res => res.json())
-                    .map(data => data.items);
+                    .map(data => data.contacts);
 
   }
 
